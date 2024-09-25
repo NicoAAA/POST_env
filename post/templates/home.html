@@ -1,0 +1,121 @@
+<!-- templates/home.html --> 
+{% comment %} <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard Message</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<section id= "title">
+    <h1>DashBoard Message</h1>
+</section>
+<section id="form">
+    <ul>
+        {% for post in post_list%}
+            <li>{{post.message}}</li>
+        {% endfor %}
+    </ul>
+</section>
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSCLE CARS POST DJANGO</title> 
+    <!-- Carga Bootstrap primero -->
+    <link rel="stylesheet" href="{% static 'CSS/bootstrap.min.css' %}">
+    <!-- Carga Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Carga el CSS personalizado -->
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    
+</head>
+<body class="bg-gradient-custom">
+    <div class="contenedor">
+        <div class="slide">
+            <div class="item" style="background-image: url({% static 'IMG\chevrolet_camaro_ss_muscle_cars.jpg'%});">
+                <div class="content">
+                    <div class="name">Switzerland</div>
+                    <div class="des">
+                        
+                        {% if post_list %}
+                            <li>{{ post_list.0.message }}</li>
+                        {% endif %}
+                        
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url({% static 'IMG/general_lee_dodge_charger_muscle_car.jpg' %});">
+                <div class="content">
+                    <div class="name">Finland</div>
+                    <div class="des">
+                    {% if post_list|length > 1 %}
+                        <li>{{ post_list.1.message }}</li>
+                    {% endif %} 
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url({% static 'IMG\1969_429_boss_classic.jpg' %});">
+                <div class="content">
+                    <div class="name">Iceland</div>
+                    <div class="des">
+                        {% if post_list|length > 2 %}
+                            <li>{{ post_list.2.message }}</li>
+                        {% endif %} 
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url({% static 'IMG\1970_plymouth_superbird.jpg' %});">
+                <div class="content">
+                    <div class="name">Australia</div>
+                    <div class="des">
+                        {% if post_list|length > 3 %}
+                            <li>{{ post_list.3.message }}</li>
+                        {% endif %}
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
+                <div class="content">
+                    <div class="name">Netherlands</div>
+                    <div class="des">
+                        {% if post_list|length > 4 %}
+                            <li>{{ post_list.4.message }}</li>
+                        {% endif %}  
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+                <div class="content">
+                    <div class="name">Ireland</div>
+                    <div class="des">
+                        {% if post_list|length > 5 %}
+                            <li>{{ post_list.5.message }}</li>
+                        {% endif %}
+                    </div>
+                    <button type= "button" class= "btn btn-success" >ver más</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <script src="static/JS/script.js"></script>
+</body>
+</html>
