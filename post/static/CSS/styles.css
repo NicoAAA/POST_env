@@ -2,16 +2,7 @@
 
 /* static/css/styles.css */
 
-
-
-/* body{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: linear-gradient(to right, #ff7e5f, #feb47b) !important;
-    Hace que el degradado cubra toda la página 
-    background-size: cover;
-} */
+/* Estilos de la página de inicio */
 .bg-gradient-custom {
     background-color: linear-gradient(to right, #ff7e5f, #feb47b); /* Degradado personalizado */
     height: 100vh; /* Esto asegura que el fondo cubra toda la ventana */
@@ -21,149 +12,183 @@
     overflow-x: hidden;
 }
 
+
+
 .contenedor{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
-    height: 600px;
-    background: #fb0202;
-    box-shadow: 0 30px 50px #dab324;
+    position: absolute; /* Posiciona el elemento de manera absoluta respecto a su contenedor padre */
+    top: 48%;   /* Coloca el elemento a la mitad de la altura del contenedor */
+    left: 50%; /* Coloca el elemento a la mitad del ancho del contenedor */
+    transform: translate(-50%, -50%); /* Centra el elemento horizontal y verticalmente */
+    width: 1408px; /* Establece el ancho del contenedor a 1408 píxeles */
+    height: 800px; /* Establece la altura del contenedor a 800 píxeles */
+    background: #bfb7b752; /* Establece el color de fondo del contenedor */
+    box-shadow: 0 30px 50px #dab324; /* Sombra del contenedor */
 }
 
 .contenedor .slide .item{
-    width: 200px;
-    height: 300px;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    border-radius: 20px;
-    box-shadow: 0 30px 50px #d29c9c73;
-    background-position: 50% 50%;
-    background-size: cover;
-    display: inline-block;
-    transition: 0.5s;
+    width: 200px; /* Establece el ancho de los elementos */
+    height: 300px; /* Establece el ancho y la altura de los elementos */
+    position: absolute; /* Posiciona el elemento de manera absoluta respecto a su contenedor padre */
+    top: 50%; /* Coloca el elemento a la mitad de la altura del contenedor */
+    transform: translate(0, -50%); /* Centra el elemento verticalmente */
+    border-radius: 20px; /* Radio de borde de 20 píxeles */
+    box-shadow: 0 30px 50px #d29c9c73; /* Sombra del elemento */
+    background-position: 50% 50%; /* Centra la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo al tamaño del contenedor */
+    display: inline-block;  /* Muestra el elemento como un bloque en línea */
+    transition: 0.5s; /* Transición de 0.5 segundos para cambios de estilo */
 }
 
 .slide .item:nth-child(1),
 .slide .item:nth-child(2){
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; /* Coloca el elemento en la parte superior del contenedor */
+    left: 0; /* Coloca el elemento en la parte izquierda del contenedor */
+    transform: translate(0, 0); /* Restablece la posición del elemento a su ubicación original */
+    border-radius: 0; /* Elimina cualquier radio de borde aplicado al elemento */
+    width: 100%; /* Establece el ancho del elemento al 100% del contenedor */
+    height: 100%; /* Establece la altura del elemento al 100% del contenedor */
 }
 
 
 .slide .item:nth-child(3){
-    left: 50%;
-    box-shadow: none;
+    left: 50%; /* Coloca el elemento a la mitad del contenedor */
+    box-shadow: none; /* Elimina cualquier sombra aplicada al elemento */
 }
 .slide .item:nth-child(4){
-    left: calc(50% + 220px);
-    box-shadow: none;
+    left: calc(50% + 220px); /* Coloca el elemento a 220 píxeles desde el borde izquierdo del contenedor */
+    box-shadow: none; /* Elimina cualquier sombra aplicada al elemento */
 }
 .slide .item:nth-child(5){
-    left: calc(50% + 440px);
-    box-shadow: none;
+    left: calc(50% + 440px); /* Coloca el elemento a 440 píxeles desde el borde izquierdo del contenedor */
+    box-shadow: none; /* Elimina cualquier sombra aplicada al elemento */
 }
 
 /* here n = 0, 1, 2, 3,... */
 .slide .item:nth-child(n + 6){
-    left: calc(50% + 660px);
-    opacity: 0;
-    box-shadow: none;
+    left: calc(50% + 660px); /* Coloca el elemento a 660 píxeles desde el borde izquierdo del contenedor */
+    opacity: 0; /* Establece la opacidad del elemento a 0 (completamente transparente) */
+    box-shadow: none; /* Elimina cualquier sombra aplicada al elemento */
 }
 
+
+.content {
+    background-color: rgba(47, 45, 45, 0.553); /* Fondo negro casi opaco */
+    padding: 20px; /* Espaciado alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    color: white; /* Texto en color blanco */
+}
+.name {
+    font-weight: bold; /* Texto de nombre más destacado */
+}
+
+.des {
+    margin-top: 10px; /* Añade espacio entre el título y la descripción */
+}
 
 
 .item .content{
-    position: absolute;
-    top: 50%;
-    left: 100px;
-    width: 300px;
-    text-align: left;
-    color: #eee;
-    transform: translate(0, -50%);
-    font-family: system-ui;
-    display: none;
+    position: absolute; /* Posiciona el elemento de manera absoluta respecto a su contenedor padre */
+    top: 50%; /* Coloca el elemento a la mitad de la altura del contenedor */
+    left: 100px; /* Coloca el elemento a 100 píxeles desde el borde izquierdo del contenedor */
+    width: 500px; /* Establece el ancho del elemento a 500 píxeles */
+    text-align: left; /* Alinea el texto a la izquierda del elemento */
+    transform: translate(0, -50%); /* Desplaza el elemento 50% hacia arriba desde su posición original */
+    font-family: system-ui; /* Establece la fuente del texto */
+    display: none; /* Oculta el contenido */
 }
 
     .content button:hover {
-        /* color: #FFFFFF; */ /* White */
-        background-color: #006046; /* Dark orange */
+        
+        background-color: #c46919e6; /* color de fondo del botóbn Naranja oscuro */
     }
 
 
 
 
 .slide .item:nth-child(2) .content{
-    display: block;
+    display: block; /* Muestra el contenido */
 }
 
 
 .content .name{
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
-    opacity: 0;
-    animation: animate 1s ease-in-out 1 forwards;
+    font-size: 40px; /* Tamaño de fuente de 40 píxeles */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-weight: bold; /* Aplica negrita al texto */
+    opacity: 0; /* Hace el texto completamente transparente */
+    animation: animate 1s ease-in-out 1 forwards; /* Aplica una animación llamada 'animate' con una duración de 1 segundo, una curva de aceleración 'ease-in-out', se ejecuta una vez y mantiene el estado final */
+    
 }
 
 .content .des{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    margin-top: 10px; /* Establece el margen superior a 10 píxeles */
+    margin-bottom: 20px; /* Establece el margen inferior a 20 píxeles */
+    opacity: 0; /* Establece la opacidad del elemento a 0 (completamente transparente) */
+    animation: animate 1s ease-in-out 0.3s 1 forwards; /* Aplica una animación llamada 'animate' con una duración de 1 segundo, una curva de aceleración 'ease-in-out', un retraso de 0.3 segundos, se ejecuta una vez y mantiene el estado final de la animación */
+
 }
 
 .content button{
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.6s 1 forwards;
+    padding: 10px 20px;  /* Establece el relleno interno del elemento a 10px en la parte superior e inferior y 20px en los lados */
+    border: none;  /* Elimina cualquier borde del elemento */
+    cursor: pointer;  /* Cambia el cursor a una mano apuntando cuando se pasa sobre el elemento */
+    opacity: 0;  /* Hace que el elemento sea completamente transparente */
+    animation: animate 1s ease-in-out 0.6s 1 forwards;  /* Aplica una animación llamada 'animate' con una duración de 1 segundo, una transición suave, un retraso de 0.6 segundos, se ejecuta una vez y mantiene el estado final */
+    
 }
 
 
 @keyframes animate {
     from{
-        opacity: 0;
-        transform: translate(0, 100px);
-        filter: blur(33px);
+        opacity: 0; /* Establece la opacidad inicial a 0, haciendo el elemento completamente transparente */
+        transform: translate(0, 100px); /* Desplaza el elemento 100 píxeles hacia abajo desde su posición original */
+        filter: blur(33px); /* Aplica un desenfoque de 33 píxeles al elemento */
     }
 
     to{
-        opacity: 1;
-        transform: translate(0);
-        filter: blur(0);
+        opacity: 1; /* Cambia la opacidad a 1, haciendo el elemento completamente opaco */
+        transform: translate(0); /* Restablece la posición del elemento a su ubicación original */
+        filter: blur(0); /* Elimina cualquier desenfoque aplicado al elemento */
     }
+
 }
 
 
 
 .button{
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: 20px;
+    width: 100%; /* Establece el ancho del elemento al 100% del contenedor padre */
+    text-align: center; /* Alinea el texto al centro del elemento */
+    position: absolute; /* Posiciona el elemento de manera absoluta respecto a su contenedor más cercano con posición relativa */
+    bottom: 20px; /* Coloca el elemento a 20 píxeles desde la parte inferior del contenedor */
+    color:#ff7e5f; /* Establece el color del texto a un tono específico de naranja */
+
 }
 
 .button button{
-    width: 40px;
-    height: 35px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    margin: 0 5px;
-    border: 1px solid #000;
-    transition: 0.3s;
+    width: 60px; /* Ancho del elemento */
+    height: 35px; /* Altura del elemento */
+    border-radius: 10px; /* Radio del borde para esquinas redondeadas */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre el elemento */
+    margin: 0 5px; /* Margen de 0 arriba y abajo, 5px a los lados */
+    border: 1px solid #e4ebe7; /* Borde sólido de 1px con color #e4ebe7 */
+    transition: 0.3s; /* Transición de 0.3 segundos para cambios de estilo */
+    background: #565353; /* Color de fondo del elemento */
 }
 
 .button button:hover{
-    background: #ababab;
-    color: #fff;
+    background: #ff0000;  /* Establece el color de fondo a rojo */
+    color: #ffc802;       /* Establece el color del texto a un tono amarillo */
+    border:#ff0000;       /* Establece el color del borde a rojo */
+    
+}
+
+.prev i {
+    color: #ffffff;  /* Color del ícono */
+    font-size: 20px; /* Tamaño del ícono */
+}
+
+.next i {
+    color: #ffffff;  /*color del ícono */
+    font-size: 20px; /*tamaño del ícono */
 }
 

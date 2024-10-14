@@ -10,8 +10,21 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
-import os
-from pathlib import Path
+""" 
+SENA CBA CENTRO DE BIOTECNOLOGIA AGROPECUARIA
+PROGRAMACION DE SOFTWARE
+
+FICHA: 2877795
+AUTOR: NICOLAS ANDRES ACOSTA HIGUERA
+PROYECTO: POST (post/settings.py)
+FECHA: 2024-08-01
+VERSION: 4.5.6  
+"""
+
+
+ 
+import os # Importa el modulo os.
+from pathlib import Path # Importa la clase Path del modulo pathlib.
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,7 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'posts.apps.PostsConfig',
+    'posts.apps.PostsConfig',# Define la aplicacion de posts.
 ]
 
 MIDDLEWARE = [
@@ -56,7 +69,7 @@ ROOT_URLCONF = 'post.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR /'templates'],
+        'DIRS': [BASE_DIR /'templates'], # Define la ruta de los templates.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,12 +130,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static/' # Define la ruta URL de los archivos estáticos.
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static'), # Define la ruta de los archivos estáticos.
 ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField' # Define el tipo de campo que se va a utilizar por defecto en la base de datos. 
+
+MEDIA_URL = '/media/'  # La URL pública para acceder a los archivos de medios
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Ruta absoluta donde se guardarán los archivos de medios
